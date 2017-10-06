@@ -1,0 +1,46 @@
+startup_message off
+defscrollback 99999
+
+escape ^Ss
+
+# for  Cent OS
+# #hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "    
+#
+# #for  Ubuntu
+# hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s " 
+
+caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
+hardstatus always on
+#hardstatus alwayslastline "%{=b}%{-b}%{R}[%{=b B}%-w%{=b BK}%>%n %t%{-}%+w%{-b}%< %=%{R}][%{-b}%{M}%m-%d %D %{G}%c%{R}]"
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+
+# Set default encoding using utf8
+defutf8 on
+
+# Disable vbell
+vbell off
+
+# Refresh the display when exiting programs
+altscreen on
+
+# Dynamic title
+# shelltitle '$ |bash'
+
+# Keboard binding
+
+bindkey "^Sb" prev
+bindkey "^Sk" kill 
+
+# remove some stupid / dangerous key bindings
+bind s
+bind k
+bind W
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+
+#shell setting
+shell "/bin/zsh"
