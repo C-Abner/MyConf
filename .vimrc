@@ -49,3 +49,8 @@ highlight User3 term=underline cterm=underline ctermfg=yellow
 highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
+
+" For clipboard settings
+" Teraterm tutorial : http://tateren.hateblo.jp/entry/2017/07/21/213020
+source ~/bin/osc52.vim
+vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
